@@ -2,10 +2,10 @@
   "pipelineConfig" : {
     "schemaVersion" : 6,
     "version" : 12,
-    "pipelineId" : "LongestStringd8bcf27c-ad10-4b35-844b-1832417278ed",
+    "pipelineId" : "LongestString159a11be-38dd-48b1-8089-7cc520357409",
     "title" : "Longest String",
     "description" : "",
-    "uuid" : "7ac76401-1853-4511-b7c6-1bf0e6d97773",
+    "uuid" : "194db46e-27c2-4dd4-b5e0-934b7d33f93b",
     "configuration" : [ {
       "name" : "executionMode",
       "value" : "STANDALONE"
@@ -219,7 +219,7 @@
       "stageVersion" : "3",
       "configuration" : [ {
         "name" : "rawData",
-        "value" : "{\n  \"f1\": \"a\",\n  \"f2\": \"xy\",\n  \"f3\": \"lmn\",\n  \"f4\": {\n    \"f5\": \"abcd\",\n    \"f6\": {\n      \"f7\": \"efghi\"\n    }\n  }\n}"
+        "value" : "{\n  \"f1\": \"a\",\n  \"f2\": \"xy\",\n  \"f3\": \"lmn\",\n  \"f4\": {\n    \"f5\": \"abcd\",\n    \"f6\": {\n      \"f7\": \"efghi\"\n    }\n  },\n  \"outputs\": {}\n}"
       }, {
         "name" : "stopAfterFirstBatch",
         "value" : false
@@ -565,10 +565,10 @@
         "value" : "FIELD_PATHS"
       }, {
         "name" : "fieldMapperConfig.conditionalExpression",
-        "value" : "${f:type() == 'STRING' and str:endsWith(f:name(), \"_length\")}"
+        "value" : "${f:type() == 'INTEGER' and str:endsWith(f:name(), \"_length\")}"
       }, {
         "name" : "fieldMapperConfig.mappingExpression",
-        "value" : "${f:value()}"
+        "value" : "/outputs/max_length"
       }, {
         "name" : "fieldMapperConfig.aggregationExpression",
         "value" : "${max(fields)}"
@@ -594,7 +594,7 @@
       "uiInfo" : {
         "description" : "",
         "label" : "Max Length",
-        "xPos" : 720,
+        "xPos" : 721,
         "yPos" : 50,
         "stageType" : "PROCESSOR"
       },
@@ -639,22 +639,22 @@
       "services" : [ ]
     },
     "info" : {
-      "pipelineId" : "LongestStringd8bcf27c-ad10-4b35-844b-1832417278ed",
+      "pipelineId" : "LongestString159a11be-38dd-48b1-8089-7cc520357409",
       "title" : "Longest String",
       "description" : "",
-      "created" : 1556161783620,
-      "lastModified" : 1556161842157,
+      "created" : 1595357038247,
+      "lastModified" : 1595357084703,
       "creator" : "admin",
       "lastModifier" : "admin",
       "lastRev" : "0",
-      "uuid" : "7ac76401-1853-4511-b7c6-1bf0e6d97773",
+      "uuid" : "194db46e-27c2-4dd4-b5e0-934b7d33f93b",
       "valid" : true,
       "metadata" : {
         "labels" : [ ]
       },
-      "name" : "LongestStringd8bcf27c-ad10-4b35-844b-1832417278ed",
+      "name" : "LongestString159a11be-38dd-48b1-8089-7cc520357409",
       "sdcVersion" : "3.8.0",
-      "sdcId" : "54bc28e0-6707-11e9-9082-47fef2a73902"
+      "sdcId" : "fa8f33a1-cb81-11ea-a9af-fb8f5823c9e2"
     },
     "metadata" : {
       "labels" : [ ]
@@ -1015,7 +1015,7 @@
     } ],
     "dataRuleDefinitions" : [ ],
     "driftRuleDefinitions" : [ ],
-    "uuid" : "f761a590-084c-42bf-ab64-76a57fcc3614",
+    "uuid" : "3587c547-b313-40c3-8ac9-5c92f8201873",
     "configuration" : [ {
       "name" : "emailIDs",
       "value" : [ ]
